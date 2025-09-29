@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import questionsEn from '@/data/questions_en.json';
 import questionsRu from '@/data/questions_ru.json';
+import AdSense from '@/components/AdSense';
 
 interface Question {
   id: number;
@@ -10,9 +11,6 @@ interface Question {
   options: string[];
 }
 
-interface QuizData {
-  questions: Question[];
-}
 
 const translations = {
   en: {
@@ -44,14 +42,14 @@ export default function Home() {
   const [answers, setAnswers] = useState<number[]>([]);
   const [quizState, setQuizState] = useState<'start' | 'quiz' | 'result'>('start');
 
-  useEffect(() => {
-    loadQuestions();
-  }, [currentLanguage]);
-
-  const loadQuestions = () => {
+  const loadQuestions = useCallback(() => {
     const data = currentLanguage === 'en' ? questionsEn : questionsRu;
     setQuestions(data.questions);
-  };
+  }, [currentLanguage]);
+
+  useEffect(() => {
+    loadQuestions();
+  }, [loadQuestions]);
 
   const switchLanguage = (lang: 'en' | 'ru') => {
     setCurrentLanguage(lang);
@@ -136,6 +134,20 @@ export default function Home() {
             >
               🎯 {translations[currentLanguage].startButton}
             </button>
+            
+            {/* Ad below start button */}
+            <div className="mt-8 flex justify-center">
+              <AdSense 
+                adSlot="3909950379" 
+                className="max-w-md"
+                adStyle={{ 
+                  display: 'block',
+                  width: '100%',
+                  maxWidth: '400px',
+                  height: '200px'
+                }}
+              />
+            </div>
           </div>
         )}
 
@@ -183,6 +195,21 @@ export default function Home() {
             <p className="text-gray-600 text-xl mb-8 leading-relaxed">
               {translations[currentLanguage].resultDescription}
             </p>
+            
+            {/* Ad above restart button */}
+            <div className="mb-8 flex justify-center">
+              <AdSense 
+                adSlot="3909950379" 
+                className="max-w-md"
+                adStyle={{ 
+                  display: 'block',
+                  width: '100%',
+                  maxWidth: '400px',
+                  height: '200px'
+                }}
+              />
+            </div>
+            
             <button
               onClick={restartQuiz}
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold uppercase tracking-wide hover:shadow-2xl hover:scale-105 transition-all duration-300"
