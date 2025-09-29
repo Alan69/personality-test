@@ -137,16 +137,17 @@ export default function Home() {
             
             {/* Ad below start button */}
             <div className="mt-8 flex justify-center">
-              <AdSense 
-                adSlot="3909950379" 
-                className="max-w-md"
-                adStyle={{ 
-                  display: 'block',
-                  width: '100%',
-                  maxWidth: '400px',
-                  height: '200px'
-                }}
-              />
+              <div className="w-full max-w-md" style={{ minHeight: '200px' }}>
+                <AdSense 
+                  adSlot="3909950379" 
+                  className="w-full"
+                  adStyle={{ 
+                    display: 'block',
+                    width: '100%',
+                    minHeight: '200px'
+                  }}
+                />
+              </div>
             </div>
           </div>
         )}
@@ -198,16 +199,17 @@ export default function Home() {
             
             {/* Ad above restart button */}
             <div className="mb-8 flex justify-center">
-              <AdSense 
-                adSlot="3909950379" 
-                className="max-w-md"
-                adStyle={{ 
-                  display: 'block',
-                  width: '100%',
-                  maxWidth: '400px',
-                  height: '200px'
-                }}
-              />
+              <div className="w-full max-w-md" style={{ minHeight: '200px' }}>
+                <AdSense 
+                  adSlot="3909950379" 
+                  className="w-full"
+                  adStyle={{ 
+                    display: 'block',
+                    width: '100%',
+                    minHeight: '200px'
+                  }}
+                />
+              </div>
             </div>
             
             <button

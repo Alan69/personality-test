@@ -85,6 +85,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#8B5CF6" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Google AdSense */}
         <script
