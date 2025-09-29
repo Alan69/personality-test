@@ -1,0 +1,54 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What's your favorite color?",
+      "options": [
+        "Red",
+        "Blue", 
+        "Green",
+        "Pink"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What do you prefer to drink?",
+      "options": [
+        "Coffee",
+        "Tea",
+        "Soda",
+        "Wine"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What's your ideal weekend activity?",
+      "options": [
+        "Watching movies",
+        "Going to the gym",
+        "Shopping",
+        "Reading books"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What type of music do you like?",
+      "options": [
+        "Rock",
+        "Pop",
+        "Classical",
+        "Electronic"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Are you gay?",
+      "options": [
+        "Yes",
+        "No",
+        "Maybe",
+        "I don't know"
+      ]
+    }
+  ]
+}
