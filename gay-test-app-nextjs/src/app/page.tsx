@@ -91,7 +91,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 flex items-center justify-center p-5">
-      <div className="bg-white/95 backdrop-blur-lg rounded-3xl p-10 max-w-2xl w-full shadow-2xl relative overflow-hidden">
+      <div className="bg-white/95 backdrop-blur-lg rounded-3xl p-10 max-w-2xl w-full shadow-2xl relative overflow-hidden min-h-[600px]">
         {/* Rainbow border */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500"></div>
         
